@@ -33,21 +33,21 @@ const LancamentosSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* First Column - Hidden on mobile */}
-          <div className="hidden md:flex flex-col gap-4">
+          <div className="hidden md:flex flex-col gap-4 max-h-[600px] justify-between">
             <img
               src={aberto}
               alt="Batom Aberto"
-              className="w-full rounded-lg shadow-md"
+              className="h-[30%] object-contain rounded-lg"
             />
             <img
               src={fechado}
               alt="Batom Fechado"
-              className="w-full rounded-lg shadow-md"
+              className="h-[30%] object-contain rounded-lg"
             />
             <img
               src={batom}
               alt="Batom"
-              className="w-full rounded-lg shadow-md"
+              className="h-[30%] object-contain rounded-lg"
             />
           </div>
 
