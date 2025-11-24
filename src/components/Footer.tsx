@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="bg-muted py-12 px-4 border-t border-border">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Atendimentos */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold uppercase">Atendimentos</h3>
