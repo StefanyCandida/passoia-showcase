@@ -5,7 +5,7 @@ import boleto from "@/assets/boleto.png";
 import instagram from "@/assets/instagram.png";
 import facebook from "@/assets/facebook-passoia.png";
 import youtube from "@/assets/youtube.png";
-import twitter from "@/assets/twitter-passoia.png";
+import linkedin from "@/assets/linkedin-passoia.png";
 
 const Footer = () => {
   return (
@@ -78,9 +78,9 @@ const Footer = () => {
               <a
                 href="#"
                 className="transition-transform hover:scale-110"
-                aria-label="Twitter"
+                aria-label="LinkedIn"
               >
-                <img src={twitter} alt="Twitter" className="h-10 w-auto" />
+                <img src={linkedin} alt="LinkedIn" className="h-10 w-auto" />
               </a>
             </div>
           </div>
