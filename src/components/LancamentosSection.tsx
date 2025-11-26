@@ -11,62 +11,37 @@ import cinzaColor from "@/assets/cinza-color.png";
 import vermelhoColor from "@/assets/vermelho-color.png";
 import bordoColor from "@/assets/bordo-color.png";
 import nudeColor from "@/assets/nude-color.png";
-
 const LancamentosSection = () => {
   const [mainImage, setMainImage] = useState(cinzaBoca);
-
   const colorMap: Record<string, string> = {
     cinza: cinzaBoca,
     vermelho: vermelhoBoca,
     bordo: bordoBoca,
-    nude: nudeBoca,
+    nude: nudeBoca
   };
-
   const handleColorClick = (color: string) => {
     setMainImage(colorMap[color]);
   };
-
-  return (
-    <section id="lancamentos" className="py-20 px-4">
+  return <section id="lancamentos" className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="section-title">APROVEITE OS LANÇAMENTOS</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* First Column - Hidden on mobile */}
-          <div className="hidden md:flex flex-col gap-4 h-full">
-            <img
-              src={aberto}
-              alt="Batom Aberto"
-              className="flex-1 object-contain rounded-lg"
-            />
-            <img
-              src={fechado}
-              alt="Batom Fechado"
-              className="flex-1 object-contain rounded-lg"
-            />
-            <img
-              src={batom}
-              alt="Batom"
-              className="flex-1 object-contain rounded-lg"
-            />
+          <div className="hidden flex-col gap-4 h-full md:flex md:items-center md:justify-center">
+            <img src={aberto} alt="Batom Aberto" className="flex-1 object-contain rounded-lg" />
+            <img src={fechado} alt="Batom Fechado" className="flex-1 object-contain rounded-lg" />
+            <img src={batom} alt="Batom" className="flex-1 object-contain rounded-lg" />
           </div>
 
           {/* Second Column - Main Image */}
           <div className="flex items-center justify-center">
-            <img
-              src={mainImage}
-              alt="Batom Principal"
-              className="w-full max-w-md rounded-lg shadow-xl transition-all duration-500"
-            />
+            <img src={mainImage} alt="Batom Principal" className="w-full max-w-md rounded-lg shadow-xl transition-all duration-500" />
           </div>
 
           {/* Third Column - Details */}
           <div className="space-y-6">
-            <img
-              src={estrelas}
-              alt="5 Estrelas"
-              className="h-8 w-auto"
-            />
+            <img src={estrelas} alt="5 Estrelas" className="h-8 w-auto" />
             
             <h3 className="text-2xl font-serif font-bold">Matte Premium</h3>
             
@@ -74,52 +49,20 @@ const LancamentosSection = () => {
               <h4 className="text-lg font-semibold">Cores disponíveis</h4>
               
               <div className="flex gap-3">
-                <button
-                  onClick={() => handleColorClick("cinza")}
-                  className="transition-transform hover:scale-110"
-                  aria-label="Cor Cinza"
-                >
-                  <img
-                    src={cinzaColor}
-                    alt="Cinza"
-                    className="w-12 h-12 rounded-full border-2 border-border hover:border-primary"
-                  />
+                <button onClick={() => handleColorClick("cinza")} className="transition-transform hover:scale-110" aria-label="Cor Cinza">
+                  <img src={cinzaColor} alt="Cinza" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary" />
                 </button>
                 
-                <button
-                  onClick={() => handleColorClick("vermelho")}
-                  className="transition-transform hover:scale-110"
-                  aria-label="Cor Vermelha"
-                >
-                  <img
-                    src={vermelhoColor}
-                    alt="Vermelho"
-                    className="w-12 h-12 rounded-full border-2 border-border hover:border-primary"
-                  />
+                <button onClick={() => handleColorClick("vermelho")} className="transition-transform hover:scale-110" aria-label="Cor Vermelha">
+                  <img src={vermelhoColor} alt="Vermelho" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary" />
                 </button>
                 
-                <button
-                  onClick={() => handleColorClick("bordo")}
-                  className="transition-transform hover:scale-110"
-                  aria-label="Cor Bordô"
-                >
-                  <img
-                    src={bordoColor}
-                    alt="Bordô"
-                    className="w-12 h-12 rounded-full border-2 border-border hover:border-primary"
-                  />
+                <button onClick={() => handleColorClick("bordo")} className="transition-transform hover:scale-110" aria-label="Cor Bordô">
+                  <img src={bordoColor} alt="Bordô" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary" />
                 </button>
                 
-                <button
-                  onClick={() => handleColorClick("nude")}
-                  className="transition-transform hover:scale-110"
-                  aria-label="Cor Nude"
-                >
-                  <img
-                    src={nudeColor}
-                    alt="Nude"
-                    className="w-12 h-12 rounded-full border-2 border-border hover:border-primary"
-                  />
+                <button onClick={() => handleColorClick("nude")} className="transition-transform hover:scale-110" aria-label="Cor Nude">
+                  <img src={nudeColor} alt="Nude" className="w-12 h-12 rounded-full border-2 border-border hover:border-primary" />
                 </button>
               </div>
             </div>
@@ -137,8 +80,6 @@ const LancamentosSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default LancamentosSection;
